@@ -43,13 +43,18 @@ CORS_ALLOWED_ORIGINS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT'),
-    }
+        'NAME': 'alx_travel_app',
+        'USER': 'root',
+        'PASSWORD': 'i12cuAOL.',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    }
 }
+
+Root_URLCONF = 'alx_travel_app.urls'
 
 # REST framework
 REST_FRAMEWORK = {
